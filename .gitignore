@@ -1,0 +1,52 @@
+# Arduino / ESP8266 build artifacts
+*.elf
+*.bin
+*.hex
+*.map
+*.eep
+
+# Arduino IDE temp folders
+build/
+.arduino15/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# Logs
+*.log
+
+# Compiled Object files
+*.o
+*.ko
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiler-generated dependency files
+*.d
+
+# Local config overrides (do not commit personal settings)
+A_config_local.h
