@@ -29,3 +29,4 @@ Open an issue with:
 ## ⚠️ Ethical Use Policy
 
 All contributions must be for **legitimate security research and education only**. PRs that add features specifically designed for malicious use will be rejected.
+

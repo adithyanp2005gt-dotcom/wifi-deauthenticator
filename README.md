@@ -1,4 +1,4 @@
-# 📡 DeautherX — ESP8266 WiFi Deauthenticator
+# 📡 WiFi Deauthenticator — ESP8266
 
 > ⚠️ **DISCLAIMER**: This project is intended **solely for educational purposes** and authorized penetration testing on networks you own or have explicit written permission to test. Unauthorized use of deauthentication attacks is **illegal** in most countries. The author assumes **no liability** for misuse.
 
@@ -6,7 +6,7 @@
 
 ## 📋 Overview
 
-**DeautherX** is an ESP8266-based WiFi deauthentication tool that leverages the IEEE 802.11 management frame injection capabilities of the ESP8266 chip. It allows you to scan nearby WiFi networks, monitor connected stations, and perform deauthentication packet injection for testing network resilience.
+**WiFi Deauthenticator** is an ESP8266-based WiFi deauthentication tool that leverages the IEEE 802.11 management frame injection capabilities of the ESP8266 chip. It allows you to scan nearby WiFi networks, monitor connected stations, and perform deauthentication packet injection for testing network resilience.
 
 Built on top of the [ESP8266 Deauther](https://github.com/SpacehuhnTech/esp8266_deauther) framework with improvements and fixes.
 
@@ -68,12 +68,12 @@ Install via **Tools → Manage Libraries**:
 
 1. **Clone this repository**
    ```bash
-   git clone https://github.com/adithyanp2005gt-dotcom/DeautherX.git
-   cd DeautherX
+   git clone https://github.com/adithyanp2005gt-dotcom/wifi-deauthenticator.git
+   cd wifi-deauthenticator
    ```
 
 2. **Open in Arduino IDE**
-   - Open `DeautherX.ino`
+   - Open `WiFiDeauthenticator.ino`
 
 3. **Select Board Settings**
    - **Board**: `NodeMCU 1.0 (ESP-12E Module)` or your ESP8266 variant
@@ -94,10 +94,10 @@ Install via **Tools → Manage Libraries**:
 Edit `A_config.h` before compiling to customize:
 
 ```cpp
-#define RESET_BUTTON  // GPIO pin for the reset button
-#define HIGHLIGHT_LED // Enable LED highlight on boot
-#define FORMAT_SPIFFS // Uncomment to format filesystem on next boot
-#define FORMAT_EEPROM // Uncomment to format EEPROM on next boot
+#define RESET_BUTTON   // GPIO pin for the reset button
+#define HIGHLIGHT_LED  // Enable LED highlight on boot
+#define FORMAT_SPIFFS  // Uncomment to format filesystem on next boot
+#define FORMAT_EEPROM  // Uncomment to format EEPROM on next boot
 #define RESET_SETTINGS // Uncomment to reset all settings on next boot
 ```
 
@@ -123,24 +123,24 @@ Edit `A_config.h` before compiling to customize:
 ## 📁 Project Structure
 
 ```
-DeautherX/
-├── DeautherX.ino       # Main sketch entry point
-├── A_config.h          # Hardware/compile-time configuration
-├── Attack.h/.cpp       # Deauth attack logic
-├── CLI.h/.cpp          # Serial command-line interface
-├── DisplayUI.h/.cpp    # OLED display UI
-├── EEPROMHelper.h      # EEPROM read/write helpers
-├── functions.h         # Utility functions
-├── language.h          # String constants / localization
-├── led.h               # LED control
-├── Names.h/.cpp        # Saved device name management
-├── oui.h               # OUI vendor lookup table
-├── Scan.h/.cpp         # WiFi scanning logic
-├── settings.h/.cpp     # Settings management
-├── SSIDs.h/.cpp        # SSID list management
-├── wifi.h              # WiFi AP/station management
+wifi-deauthenticator/
+├── WiFiDeauthenticator.ino  # Main sketch entry point
+├── A_config.h               # Hardware/compile-time configuration
+├── Attack.h/.cpp            # Deauth attack logic
+├── CLI.h/.cpp               # Serial command-line interface
+├── DisplayUI.h/.cpp         # OLED display UI
+├── EEPROMHelper.h           # EEPROM read/write helpers
+├── functions.h              # Utility functions
+├── language.h               # String constants / localization
+├── led.h                    # LED control
+├── Names.h/.cpp             # Saved device name management
+├── oui.h                    # OUI vendor lookup table
+├── Scan.h/.cpp              # WiFi scanning logic
+├── settings.h/.cpp          # Settings management
+├── SSIDs.h/.cpp             # SSID list management
+├── wifi.h                   # WiFi AP/station management
 └── src/
-    └── ArduinoJson-v5.13.5/  # Bundled ArduinoJson v5
+    └── ArduinoJson-v5.13.5/ # Bundled ArduinoJson v5
 ```
 
 ---
